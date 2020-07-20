@@ -21,7 +21,7 @@ def show_digit(digit):
         idata[y, x][2] = pixel
         idata[y, x][3] = ubyte(255)
 
-        y += 1 * (x == 27 and y < 28 - 1)
+        y += 1 * (x == 27 and y != 27)
         x = (x + 1) * (x < 28 - 1)
 
     plt.imshow(idata)
