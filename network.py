@@ -118,10 +118,10 @@ class Network:
             random.shuffle(tdata)
 
             # array of batch_n x batch_size shape
-            batches = array([
+            batches = (
                 tdata[k:k+batch_size]
                 for k in range(0, batch_n * batch_size, batch_size)
-             ])
+             )
 
             for batch in batches:
                 self.update_batch(batch, batch_size)
